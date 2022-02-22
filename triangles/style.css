@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: black;
+}
+
+body #svgContainer {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+body #svgContainer.dissapear {
+  display: none;
+}
+
+body #svgContainer svg {
+  border-radius: 50%;
+}
+
+body #svgContainer svg circle {
+  -webkit-transition: stroke-width 0.2s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  transition: stroke-width 0.2s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, stroke-width 0.2s ease-in-out;
+  transition: transform 0.5s ease-in-out, stroke-width 0.2s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+body #svgContainer svg circle.bigger {
+  stroke-width: 5px;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body #svgContainer svg circle.transitionned {
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  opacity: 0;
+}
+
+body h1 {
+  position: absolute;
+  top: 49%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 10;
+  color: black;
+  font-size: 200px;
+  font-family: "General Sans", sans-serif;
+  font-weight: 300;
+  pointer-events: none;
+}
+
+body #dotWillBecomeBig {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 49.9%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body #dotWillBecomeBig.full-page {
+  -webkit-transition: width 0.5s ease-in-out, height 0.5s ease-in-out, border-radius 0.8s ease-in-out;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out, border-radius 0.8s ease-in-out;
+  border-radius: 0;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  pointer-events: none;
+}
+/*# sourceMappingURL=style.css.map */
